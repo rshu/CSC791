@@ -1,0 +1,142 @@
+
+-----| testingFailure |-----------------------
+# this one must fail.. just to test if the  unit test system is working
+Traceback (most recent call last):
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 22, in k
+    f()
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 33, in testingFailure
+    assert 1==2
+AssertionError
+
+
+-----| testingSuccess |-----------------------
+# if this one fails, we have a problem!
+# pass
+
+-----| testLongWindedComputation |-----------------------
+# test long winded computation
+# pass
+
+-----| testMatchFromRe |-----------------------
+# test match value in the re module
+Traceback (most recent call last):
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 22, in k
+    f()
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 57, in testMatchFromRe
+    assert re.match == 10
+AssertionError
+
+
+-----| testDivision |-----------------------
+# test division after import division module
+# pass
+
+-----| testSubstract |-----------------------
+# test function substract
+# pass
+
+-----| testStringLength |-----------------------
+# test string length
+# pass
+
+-----| testZeroDivision |-----------------------
+# test throwing an exception
+# pass
+
+-----| testElementInList |-----------------------
+# test if 3 is in the list
+# pass
+
+-----| testUnpackList |-----------------------
+# test unpacking the list
+# pass
+
+-----| testTuple |-----------------------
+# test tuple
+# pass
+
+-----| testElementInDictionary |-----------------------
+# test element in dictionary
+# pass
+
+-----| testDefaultDict |-----------------------
+# test the defaultdict
+# pass
+
+-----| testCounter |-----------------------
+# test counter
+# pass
+
+-----| testElementInSet |-----------------------
+# test element in set
+# pass
+
+-----| testControlFlow |-----------------------
+# test control flow
+# pass
+
+-----| testTruthiness |-----------------------
+# test truthiness
+# pass
+
+-----| testAllFunction |-----------------------
+# test the all function
+# pass
+
+-----| testSorted |-----------------------
+# test the sorted function
+# pass
+
+-----| testListComprehensions |-----------------------
+# test list comprehensions
+# pass
+
+-----| testGenerator |-----------------------
+# test if it is a generator object
+# pass
+
+-----| testRandomness |-----------------------
+# test randomness with different seeds
+Traceback (most recent call last):
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 22, in k
+    f()
+  File "C:/Users/terry/PycharmProjects/CSC791/w1.py", line 259, in testRandomness
+    assert a == b
+AssertionError
+
+
+-----| testRegularExpression |-----------------------
+# test Regular Expression
+# pass
+
+-----| testOOP |-----------------------
+# test object oriented programming
+# pass
+
+-----| testFunctionalTools |-----------------------
+# test functional tools
+# pass
+
+-----| testReduce |-----------------------
+# test the reduce function
+# pass
+
+-----| testEnumerate |-----------------------
+# test enumerate
+# pass
+
+-----| testArgumentUnpacking |-----------------------
+# test argument unpacking
+# pass
+
+-----| testArgsAndKwargs |-----------------------
+# test args and kwargs
+# pass
+
+-----| testArbitraryArguments |-----------------------
+# test arbitrary arguments
+# pass
+
+# pass= 27 fail= 3 %pass = 90%
+
+Process finished with exit code 0
