@@ -13,7 +13,8 @@ class Sym:
         self.most = 0
         self.n = 0
         self._ent = None
-        [self.symInc(f(x)) for x in pairs]
+        for x in pairs:
+            self.symInc(f(x))
 
     def symInc(self,x):
         if x == "?":
