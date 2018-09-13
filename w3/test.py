@@ -28,7 +28,7 @@ class O:
 
 
 @O.k
-def testNum():
+def test_Num():
     n = Num(1024, [4,10,15,38,54,57,62,83,100,100,174,190,215,225,
        233,250,260,270,299,300,306,333,350,375,443,475,
        525,583,780,1000])
@@ -38,7 +38,7 @@ def testNum():
 
 
 @O.k
-def testSample():
+def test_Sample():
     random.seed(1)
     s = [Sample(2**i) for i in range(5, 10)]
 
@@ -53,7 +53,7 @@ def testSample():
 
 
 @O.k
-def testSym():
+def test_Sym():
     s = Sym(['y','y','y','y','y','y','y','y','y',
              'n','n','n','n','n'])
     assert abs(s.symEnt() - 0.9403) < 0.01
