@@ -86,11 +86,11 @@ def rows1(src):
             first = False
 
     print("\t\t\tn\tmode\tfrequency\n")
-    for key, val in data.syms.items():
-        print(f'{key}\t{data.name[key]}\t\t{val.n}\t{val.mode}\t{val.most}')
+    for key, value in data.syms.items():
+        print(f'{key}\t{data.name[key]}\t\t{value.n}\t{value.mode}\t{value.most}')
     print("\n\t\t\tn\tmu\tsd\n")
-    for key, val in data.nums.items():
-        print(f'{key}\t{data.name[key]}\t\t{val.n}\t{val.mu:.2f}\t{val.sd:.2f}')
+    for key, value in data.nums.items():
+        print(f'{key}\t{data.name[key]}\t\t{value.n}\t{value.mu:.2f}\t{value.sd:.2f}')
 
 
 def rows(s):
