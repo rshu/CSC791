@@ -87,6 +87,6 @@ def rows1(src):
         print(f'{index}\t{data.name[index]}\t\t{value.n}\t{value.mu:.2f}\t{value.sd:.2f}')
 
 
-def rows(s):
-    rows1(s)
+def rows(src):
+    rows1(src)
 
