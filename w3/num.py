@@ -16,7 +16,7 @@ class Num:
         self.some = Sample(max)
         self.w = 1
         for x in pairs:
-            self.symInc(f(x))
+            self.numInc(f(x))
 
     def numInc(self,x):
         if x == "?":
