@@ -1,4 +1,4 @@
-import re, sys
+import re
 from sym import Sym
 from num import Num
 
@@ -63,36 +63,30 @@ class Data:
         return self
 
 
-"""make data from Ram"""
-def lines(src):
-    if src[-3:] in ["csv"]:
-        with open(src) as fs:
-            for line in fs:
-                yield line
-
-
-""" and display result"""
+""" read the file and display result"""
 def rows1(src):
     first = True
     data = Data()
-    for line in src:
-        line = re.sub('[\t\r\n]*|#.*', "", line)
-        cells = [i.strip() for i in line.split(',')]
-        if len(cells) > 0:
-            if first:
-                data.header(cells)
-            else:
-                data.row(cells)
-            first = False
+    if src[-3:] in ["csv"]:
+        with open(src) as file:
+            for line in file:
+                line = re.sub('[\t\r\n]*|#.*', "", line)
+                cells = [i.strip() for i in line.split(',')]
+                if len(cells) > 0:
+                    if first:
+                        data.header(cells)
+                    else:
+                        data.row(cells)
+                    first = False
 
     print("\t\t\tn\tmode\tfrequency\n")
-    for key, value in data.syms.items():
-        print(f'{key}\t{data.name[key]}\t\t{value.n}\t{value.mode}\t{value.most}')
+    for index, value in data.syms.items():
+        print(f'{index}\t{data.name[index]}\t\t{value.n}\t{value.mode}\t{value.most}')
     print("\n\t\t\tn\tmu\tsd\n")
-    for key, value in data.nums.items():
-        print(f'{key}\t{data.name[key]}\t\t{value.n}\t{value.mu:.2f}\t{value.sd:.2f}')
+    for index, value in data.nums.items():
+        print(f'{index}\t{data.name[index]}\t\t{value.n}\t{value.mu:.2f}\t{value.sd:.2f}')
 
 
 def rows(s):
-    rows1(lines(s))
+    rows1(s)
 
