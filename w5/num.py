@@ -1,3 +1,4 @@
+from __future__ import division
 from sample import Sample
 
 
@@ -6,14 +7,14 @@ class Num:
     def f(x):
         return x
 
-    def __init__(self, max, pairs=[], f=f):
+    def __init__(self, pairs=[], f=f):
         self.n = 0
         self.mu = 0
         self.m2 = 0
         self.sd = 0
         self.lo = 10 ** 32
         self.hi = -10 ** 32
-        self.some = Sample(max)
+        self.some = Sample()
         self.w = 1
         for x in pairs:
             self.numInc(f(x))
@@ -38,7 +39,7 @@ class Num:
         return x
 
     def numDec(self, x):
-        if x == "?":
+        if x is "?":
             return x
 
         if self.n == 1:
@@ -56,4 +57,8 @@ class Num:
         if x == "?":
             return 0.5
         else:
-            return (self.x - self.lo) / (self.hi - self.lo + 10 ** -32)
+            return (x - self.lo) / (self.hi - self.lo + 10 ** -32)
+
+    def numXpect(i, j):
+        n = i.n + j.n + 0.0001
+        return i.n / n * i.sd + j.n / n * j.sd
