@@ -1,6 +1,6 @@
 import re, traceback, random
-from dom import mainDom
-from unsuper import mainUnsuper
+from dom import main_dom
+from unsuper import main_unsuper
 
 
 class O:
@@ -30,17 +30,17 @@ class O:
 def testDomWeather():
     random.seed(1)
     print("\nweatherLong.csv\n")
-    mainDom("weatherLong.csv")
+    main_dom("weatherLong.csv")
 
 
 @O.k
 def testDomAuto():
     random.seed(1)
     print("\nauto.csv\n")
-    mainDom("auto.csv", True)
+    main_dom("auto.csv", True)
 
 
 @O.k
 def testUnsuper():
     print("\nweatherLong.csv\n")
-    mainUnsuper("weatherLong.csv")
+    main_unsuper("weatherLong.csv")
