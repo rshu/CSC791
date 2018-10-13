@@ -25,14 +25,17 @@ def super(data, goal=None, enough=None):
         cut = None
         xl, xr = Num(), Num()
         yl, yr = Num(), Num()
+
         for i in range(lo, hi + 1):
             xr.numInc(rows[i][c])
             yr.numInc(rows[i][goal])
+
         bestx = xr.sd
         besty = yr.sd
         mu = yr.mu
         n = yr.n
-        if (hi - lo > 2 * enough):
+
+        if hi - lo > 2 * enough:
             for i in range(lo, hi + 1):
                 x = rows[i][c]
                 y = rows[i][goal]
@@ -64,7 +67,8 @@ def super(data, goal=None, enough=None):
 
     def stop(c, t):
         for i in range(len(t) - 1, -1, -1):
-            if t[i][c] != "?": return i
+            if t[i][c] != "?":
+                return i
         return 0
 
     for c in data.indeps:

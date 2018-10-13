@@ -46,5 +46,4 @@ def doms(data):
             row2 = another(r1, data.rows)
             s = dom(data, row1, row2) and 1 / n or 0
             row1[c] += s
-
     return data
