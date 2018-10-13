@@ -1,4 +1,5 @@
 import re, traceback, random
+from super import mainSuper
 
 
 class O:
@@ -22,3 +23,15 @@ class O:
             O.n += 1
             print(traceback.format_exc())
         return f
+
+
+@O.k
+def testSuper1():
+    print("\nweatherLong.csv\n")
+    mainSuper("weatherLong.csv")
+
+
+@O.k
+def testSuper1():
+    print("\nauto.csv\n")
+    mainSuper("auto.csv")
