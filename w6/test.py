@@ -1,5 +1,5 @@
-import re, traceback, random
-from super import mainSuper
+import re, traceback
+from super import main_Super
 
 
 class O:
@@ -26,12 +26,12 @@ class O:
 
 
 @O.k
-def testSuper1():
+def testSuperWeather():
     print("\nweatherLong.csv\n")
-    mainSuper("weatherLong.csv")
+    main_Super("weatherLong.csv")
 
 
 @O.k
-def testSuper1():
+def testSuperAuto():
     print("\nauto.csv\n")
-    mainSuper("auto.csv")
+    main_Super("auto.csv")
